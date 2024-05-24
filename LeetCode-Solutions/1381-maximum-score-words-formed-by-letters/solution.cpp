@@ -7,10 +7,6 @@ public:
         for ( auto ch : letters ) {
             init[ch-'a']++;
         }
-        for ( int i = 0 ; i < 26 ; ++i ) {
-            cout<<init[i]<<" ";
-        }
-        cout<<'\n';
         int ans = 0;
         for ( int mask = 0 ; mask < ( 1  << n ) ; ++mask ) {
             for ( int i = 0 ; i < 26 ; ++i ) {
