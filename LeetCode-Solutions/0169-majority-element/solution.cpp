@@ -1,20 +1,12 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
+        map<int,int> mp;
         int n = nums.size();
-        int count = 1,ans;
-        sort(nums.begin(),nums.end());
-        for ( int i = 1 ; i < n ; ++i ) {
-            if ( nums[i] == nums[i-1] ) {
-                count++;
-                if ( count > n/2 ) ans = nums[i];
-            }
-            else {
-                count = 1;
-            }
-            cout<<count<<'\n';
+        for ( auto i : nums ) {
+            mp[i]++;
+            if ( mp[i] > n/2 ) return i;
         }
-        if ( n == 1 ) ans = nums[0];
-        return ans;
+        return -1;
     }
 };
