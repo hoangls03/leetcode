@@ -42,7 +42,6 @@ public:
         long long ans = 0;
         for ( int i = 0 ; i < source.size() ; ++i ) {
             if ( d[source[i]-'a'][target[i]-'a'] == oo ) return -1;
-            //cout << d[source[i]-'a'][target[i]-'a'] << " " << source[i] << " " << target[i] << '\n';
             ans += d[source[i]-'a'][target[i]-'a']; 
         }
         d.clear();
