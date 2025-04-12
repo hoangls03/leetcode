@@ -19,11 +19,6 @@ public:
     }
     map<long long,int> mp;
     void write( int m, int n, int k, long long& ans) {
-        /*for ( int i = 0 ; i < m ; ++i ) {
-            cout<<bt[i];
-        }
-        cout<<'\n';
-        */
         int bt2[11];
         int o = 0;
         if ( bt[0] != 0 ) {
