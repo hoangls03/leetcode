@@ -16,7 +16,6 @@ public:
                 mp[nums[right]]++;
                 right++;
             }
-            //cout<<i<<" "<<right<<'\n';
             if ( mp[max_num] >= k ) ans += n - right + 1;
             mp[nums[i]]--;
         }
