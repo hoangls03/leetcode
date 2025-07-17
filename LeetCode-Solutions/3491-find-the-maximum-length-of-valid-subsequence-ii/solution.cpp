@@ -22,22 +22,6 @@ public:
         for ( int j = 0 ; j < k ; ++j ) {
             ans = max(ans,dp[j][j]);
         }
-        /*
-        for ( int z = j+1 ; z < k ; ++z ) {
-                   if ( nums[i] == j || nums[i] == z ) {
-                       if ( mark[j][z] != nums[i] ) {
-                           dp[j][z]++;
-                           mark[j][z] = nums[i];
-                       }
-                   }
-                    ans = max(ans,dp[j][z]);
-                }
-        */
-        for ( auto i : nums ) {
-            cout<<i<<" ";
-        }
-        cout<<'\n';
-        cout<<ans<<'\n';
         for ( int i = 0 ; i < n ; ++i ) {
             int zz = nums[i];
             for ( int jj = 0 ; jj < k ; ++jj ) {
@@ -48,7 +32,6 @@ public:
                     dp[j][z]++;
                     mark[j][z] = nums[i];
                 }
-                //cout<<i<<" "<<j<<" "<<z<<" "<<dp[j][z]<<'\n';
                 ans = max(ans,dp[j][z]);
             }
             
