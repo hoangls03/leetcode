@@ -14,7 +14,6 @@ public:
         priority_queue<ii,vector<ii>,decltype(&cmp)> pq(cmp);
         for ( auto e : classes ) {
             pq.push({e[0],e[1]});
-            //cout<<e[0]<<" "<<e[1]<<'\n';
         }
         while ( extraStudents ) {
             auto u = pq.top();
