@@ -17,9 +17,6 @@ public:
         }
         int ans = 0;
         sort(a,a+n,cmp);
-        /*for ( auto i : a ) {
-            cout<<i.fi<<" "<<i.se<<'\n';
-        }*/
         vector<vector<ii>> q(n);
         for ( int i = 0 ; i < n ; ++i ) {
             set<int> st;
@@ -30,7 +27,6 @@ public:
                     auto it = st.lower_bound(a[j].se);
                     
                     if ( it != st.end() ) check = false;
-                    //if ( i == 0 && j == 2 ) cout<<st.size()<<" "<<*st.begin()<<" "<<a[j].se<<'\n';
                     if ( check ) { 
                         st.insert(a[j].se);
                     }
